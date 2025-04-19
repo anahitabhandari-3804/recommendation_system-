@@ -38,5 +38,6 @@ Ensure you have Python 3.7+ installed. You can download Python from [python.org]
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/your-username/shl-assessment-recommender.git
+   git clone https://github.com/your-username/recommendation_system.git
    cd shl-assessment-recommender
+
