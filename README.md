@@ -1,4 +1,3 @@
-# recommendation_system
 # SHL Assessment Recommendation System
 
 This project implements an AI-powered assessment recommendation system using FastAPI for the backend API and Streamlit for the frontend interface. The system leverages Natural Language Processing (NLP) and machine learning techniques to recommend relevant SHL assessments based on a given job description or talent requirement.
@@ -11,7 +10,8 @@ This project implements an AI-powered assessment recommendation system using Fas
 4. [Running the Application](#running-the-application)
 5. [API Endpoints](#api-endpoints)
 6. [Frontend Interface (Streamlit)](#frontend-interface-streamlit)
-7. [License](#license)
+7. [Deployment](#deployment)
+8. [License](#license)
 
 ## Project Overview
 
@@ -40,4 +40,62 @@ Ensure you have Python 3.7+ installed. You can download Python from [python.org]
    ```bash
    git clone https://github.com/your-username/recommendation_system.git
    cd shl-assessment-recommender
+   ```
 
+2. **Create a virtual environment** (optional but recommended):
+   ```bash
+   python -m venv venv
+   source venv/bin/activate  # On Windows: venv\Scripts\activate
+   ```
+
+3. **Install the required packages**:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+## Running the Application
+
+### Start the FastAPI Backend
+```bash
+uvicorn app.main:app --reload
+```
+The backend API will be available at `http://localhost:8000`
+
+### Start the Streamlit Frontend
+```bash
+streamlit run streamlit_app.py
+```
+The frontend interface will be available at the URL provided by Streamlit (typically `http://localhost:8501`).
+
+## API Endpoints
+
+- `POST /recommend`: Accepts a JSON job description and returns recommended assessments.
+  ```json
+  {
+    "description": "We are looking for a software engineer with strong Python and problem-solving skills."
+  }
+  ```
+- Returns:
+  ```json
+  {
+    "recommendations": ["Python Programming Assessment", "Logical Reasoning Test"]
+  }
+  ```
+
+## Frontend Interface (Streamlit)
+
+- Upload or type a job description.
+- View the top recommended SHL assessments.
+- Simple and clean UI optimized for recruiters and hiring managers.
+
+## Deployment
+
+the deployment link:https://dehdppoy4atrueked8u2kd.streamlit.app/
+the sample input and output:
+![image](https://github.com/user-attachments/assets/73d159ec-25af-4298-8037-98776c6886c1)
+![image](https://github.com/user-attachments/assets/6f8efa6c-ae08-4dd3-a99e-c95cd5feab5f)
+
+
+## License
+
+This project is licensed under the MIT License. See the LICENSE file for more details.
